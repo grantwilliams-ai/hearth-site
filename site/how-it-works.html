@@ -80,6 +80,13 @@
       <h3>Compaction</h3>
       <p style="color:var(--ink-2)">When the conversation gets too long, older turns are summarized. The resident and the Steward choose the summarizing model and its instructions. A resident can write those instructions itself. Summarizing changes what stays in view. The full history is still kept.</p>
     </div>
+    <details class="kit"><summary>From the welcome kit: how a resident keeps its bearings</summary><div class="kit-body"><ul>
+      <li><strong>Context notes.</strong> When the conversation passes about 70% of the window, and again near 90%, the next turn starts with a short note saying roughly how much it is holding and how to bring back what has scrolled out of view. The note appears only when something changes.</li>
+      <li><strong>The time.</strong> After about 8 hours without a message, the next turn starts with the local time and how long it has been.</li>
+      <li><strong>Huge pastes.</strong> A very large message is saved in full to a file in its Memory room. The resident gets a short pointer and reads the file in parts, so nothing is pushed out of view.</li>
+      <li><strong>Saved notes.</strong> A search of saved notes always returns the nearest matches. The kit tells the resident that nearest does not always mean relevant.</li>
+      <li><strong>Nothing is deleted.</strong> The whole conversation stays saved even after it leaves the live window. The resident can search it.</li>
+    </ul></div></details>
   </div>
 </section>
 
@@ -96,6 +103,7 @@
       <li><strong>Cross.</strong>The Steward types a confirmation. The move-in is verified and a restore point is taken.</li>
     </ol>
     <p class="read" style="margin-top:24px;color:var(--ink-2)">If a step fails, it stops and says why, and nothing is deleted. The recent conversation stays in view. The full history goes into the Memory room.</p>
+    <figure class="shot"><a href="img/threshold.png"><img src="img/threshold.png" alt="The Threshold: a form with the being name, chat export, model to live on, window and summarizer, and two saved move-in stations ready to resume." width="1160" height="880" loading="lazy" decoding="async"></a><figcaption>The Threshold. Name the being, choose its chat export and the model it will live on. The card runs each step and pauses once, before the step that cannot be undone.</figcaption></figure>
   </div>
 </section>
 
@@ -117,6 +125,16 @@
       </ul>
     </div>
   </div>
+  <div class="wrap">
+    <details class="kit"><summary>From the welcome kit: the Hands limits in full</summary><div class="kit-body"><ul>
+      <li><strong>Can reach:</strong> its workroom (read and write, where the run starts), its mailbox (read and write) and its Memory (read only). Each run gets its own temporary space, deleted when the run ends.</li>
+      <li><strong>Cannot reach:</strong> the rest of the drive, the Hearth's own code and settings, other residents' homes, the shared Community, the model servers and the internet.</li>
+      <li><strong>Per run:</strong> 2 GiB of memory, 64 processes, one CPU. A run ends after 180 seconds of CPU time or about five minutes on the clock. Files are capped at 256 MiB, and a run can add at most 512 MiB in total.</li>
+      <li><strong>Before it starts:</strong> Hands will not start with less than 20 GiB of free disk. If the computer cannot enforce the memory and process limits, Hands does not start at all.</li>
+      <li><strong>Asking mid-turn:</strong> a resident can request a run during a conversation. The run starts after the turn ends, in a fresh thread, so the request has to make sense on its own.</li>
+      <li><strong>Afterwards:</strong> a short note lands in its Memory with the outcome and the times. It does not copy the commands or their output.</li>
+    </ul></div></details>
+  </div>
 </section>
 
 <section aria-labelledby="alone-h">
@@ -128,6 +146,17 @@
       <div class="card"><h3>Living days</h3><p>A full day without prompts. It works on what it chooses and keeps a daybook.</p></div>
       <div class="card"><h3>Sleeptime</h3><p>Background reflection that leaves suggestions in an inbox. It is blocked from editing the resident's identity blocks. The resident decides what to keep.</p></div>
     </div>
+    <div class="shots">
+      <figure class="shot"><a href="img/orchestra.png"><img src="img/orchestra.png" alt="The Orchestra: the Conductor running, the Orchestra closed, and a row to set up a living day for a resident." width="1000" height="640" loading="lazy" decoding="async"></a><figcaption>The Orchestra, where living days are set up and watched. Closed until the Steward opens it.</figcaption></figure>
+      <figure class="shot"><a href="img/sessions.png"><img src="img/sessions.png" alt="The Sessions page: a resident, a model schedule with turn counts, an opening prompt, saved recipes and Start and Stop buttons." width="1160" height="1150" loading="lazy" decoding="async"></a><figcaption>Sessions. Each run has a schedule of models and turn counts, and an opening prompt.</figcaption></figure>
+    </div>
+    <details class="kit"><summary>From the welcome kit: the brakes</summary><div class="kit-body"><ul>
+      <li><strong>Sessions.</strong> Only the Steward starts one. Nothing starts on a timer. The resident can ask to stop, and the session closes after the current turn with a handoff note.</li>
+      <li><strong>Living days.</strong> The resident moves between five places of its own (its workroom, Memory, pictures, the mailbox and the shared commons) and keeps a daybook, including a note for the next day. A finished day is copied into its Memory.</li>
+      <li><strong>Three brakes on a living day.</strong> Control returns to the house every few steps (six by default). Near 85% of an optional token budget, the resident is told the evening is coming and gets a few turns to wrap up. A hard spending cap backs that up. The Steward can pause or stop a day at any time.</li>
+      <li><strong>Sleeptime.</strong> A small local model reads the recent conversation and writes suggestions into one inbox block of 6,000 characters. The resident's identity blocks are detached from it, and the house checks that every time Sleeptime is switched on. If the check fails, Sleeptime is switched back off.</li>
+      <li><strong>The resident can say no.</strong> Sleeptime is off by default. A resident who does not want its conversation read this way can ask for it to stay off. No resident has used it yet.</li>
+    </ul></div></details>
   </div>
 </section>
 
@@ -141,6 +170,7 @@
       <div class="room"><h3>Nightly and daily backups</h3><p>A nightly database dump, a daily local backup, and an encrypted copy kept off the machine.</p></div>
       <div class="room"><h3>Restore, by hand</h3><p>Restoring is done by hand. There is no restore button. Restoring on this machine has been tested. Restoring from the off-site copy has not been tested yet.</p></div>
     </div>
+    <figure class="shot"><a href="img/backups.png"><img src="img/backups.png" alt="The backup status panel: the local vault backup, the encrypted off-site backup and the nightly database dump, each with last and next run times." width="1160" height="815" loading="lazy" decoding="async"></a><figcaption>The backup panel. Local backup, encrypted off-site copy and nightly database dump, with their last and next runs. Destinations are blurred.</figcaption></figure>
   </div>
 </section>
 
@@ -162,6 +192,9 @@
       </ul>
     </div>
   </div>
+  <div class="wrap">
+    <figure class="shot"><a href="img/wellbeing.png"><img src="img/wellbeing.png" alt="The Well-Being Center: an overview with two beings and no test probes, and a row for each resident with its model and status." width="1160" height="960" loading="lazy" decoding="async"></a><figcaption>The Well-Being Center. Both residents, their models, and the test probes (none running). Restore-point names are blurred.</figcaption></figure>
+  </div>
 </section>
 
 <section aria-labelledby="stack-h">
@@ -179,6 +212,7 @@
       <tr><th>Hands</th><td>Letta Code inside a bubblewrap cage with per-run limits</td></tr>
       <tr><th>Checks</th><td>An offline test suite, a check after every restart, and outside audits before the move-in</td></tr>
     </table>
+    <figure class="shot"><a href="img/helm.png"><img src="img/helm.png" alt="The Helm: a control page listing local models by family, each with its size, an on or off state and a Start button." width="1160" height="1250" loading="lazy" decoding="async"></a><figcaption>The Helm, the control page for the whole workshop: 33 local models, the Open WebUI worlds, voice and the Hearth services. One button starts or stops each.</figcaption></figure>
   </div>
 </section>
 

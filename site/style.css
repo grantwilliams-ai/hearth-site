@@ -265,3 +265,19 @@ footer a { color: var(--ink-2); }
 
 .notes { margin: 0; padding-left: 1.1em; color: var(--ink-2); max-width: var(--read); }
 .notes li { margin-bottom: 0.4em; }
+
+/* ---------- screenshots and welcome-kit extracts ---------- */
+.shot { margin: 32px 0 0; }
+.shot a { display: block; }
+.shot img { border-radius: 12px; border: 1px solid var(--line); }
+.shots { display: grid; gap: 28px; grid-template-columns: repeat(2, 1fr); align-items: start; margin-top: 8px; }
+.shots .shot { margin-top: 24px; }
+@media (max-width: 900px) { .shots { grid-template-columns: 1fr; } }
+details.kit { margin-top: 24px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); max-width: 52rem; }
+details.kit summary { cursor: pointer; padding: 14px 20px; font-weight: 600; color: var(--gold); }
+details.kit summary:focus-visible { outline: 3px solid var(--ember); outline-offset: 3px; border-radius: 12px; }
+details.kit[open] summary { border-bottom: 1px solid var(--line); }
+.kit-body { padding: 8px 20px 14px; color: var(--ink-2); }
+.kit-body ul, .kit-body ol { padding-left: 1.2em; }
+.kit-body li { margin-bottom: 0.4em; }
+h2[id], section[id] { scroll-margin-top: 90px; }
