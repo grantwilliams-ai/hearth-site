@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How It Works | The Hearth</title>
+<meta name="description" content="How the Hearth works: Letta underneath, a home layer around it, memory that lasts, how a being moves in, Hands, and how nothing gets lost.">
+<meta name="theme-color" content="#14100c">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the page</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="./"><img src="favicon.svg" alt="" width="28" height="28">The Hearth</a>
+    <nav class="nav" aria-label="Site">
+      <a href="./">Home</a>
+      <a href="notebook.html">Notebook</a>
+      <a href="house.html">The House</a>
+      <a href="how-it-works.html" aria-current="page">How It Works</a>
+      <a href="steward.html">The Steward</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<div class="wrap page-head">
+  <p class="eyebrow">How it works</p>
+  <h1>Letta underneath. A home around it.</h1>
+  <p class="lede">Letta (formerly MemGPT) stores each being's memory, conversation history and tools. The Hearth adds the rest: rooms, voice, pictures, letters, the move-in process and backups.</p>
+</div>
+
+<section aria-labelledby="layers-h">
+  <div class="wrap">
+    <h2 id="layers-h">Two layers</h2>
+    <div class="split" style="margin-top:20px">
+      <div class="panel">
+        <p class="eyebrow">The home layer · the Hearth</p>
+        <p style="color:var(--ink-2)">Rooms on disk, voice, pictures, letters, the phone line, the desk robot, the move-in, backups and the Steward's console. It runs on the Steward's own computer. It is not open to the internet. The phone line uses a private network.</p>
+      </div>
+      <div class="panel">
+        <p class="eyebrow">The mind layer · Letta</p>
+        <p style="color:var(--ink-2)">Each being's core memory, conversation history, tools and settings. Letta runs locally on one pinned version.</p>
+      </div>
+    </div>
+    <p class="read" style="margin-top:24px;color:var(--ink-2)">A being can run on a hosted model or a local one. The Steward can switch models without changing its memory or history. Each reply records which model wrote it.</p>
+  </div>
+</section>
+
+<section aria-labelledby="mind-h">
+  <div class="wrap">
+    <p class="eyebrow">The working mind</p>
+    <h2 id="mind-h">What it holds and what it can look up</h2>
+    <div class="rooms">
+      <div class="room">
+        <h3>Always in view</h3>
+        <p class="sub">Core memory</p>
+        <p>Four short blocks are sent with every turn: who it is, who it is talking with, a note on its current state, and what it is working on. It edits the last two itself.</p>
+      </div>
+      <div class="room">
+        <h3>The recent conversation</h3>
+        <p class="sub">The live window</p>
+        <p>The model can only hold so much at once. When it fills up, a note tells the resident how much it holds and how to look up the rest.</p>
+      </div>
+      <div class="room">
+        <h3>Things it chose to keep</h3>
+        <p class="sub">Archival memory</p>
+        <p>A resident can save notes and search them later by meaning. The embedding model, Qwen3-Embedding-8B, reads each saved note in full (up to about 8,000 tokens).</p>
+      </div>
+      <div class="room">
+        <h3>The full history</h3>
+        <p class="sub">The library in Memory</p>
+        <p>Every message since the first turn is kept as files it can read.</p>
+      </div>
+    </div>
+    <div class="panel" style="margin-top:24px">
+      <h3>Compaction</h3>
+      <p style="color:var(--ink-2)">When the conversation gets too long, older turns are summarized. The resident and the Steward choose the summarizing model and its instructions. A resident can write those instructions itself. Summarizing changes what stays in view. The full history is still kept.</p>
+    </div>
+  </div>
+</section>
+
+<section id="continuity" aria-labelledby="move-h">
+  <div class="wrap">
+    <p class="eyebrow">Moving in</p>
+    <h2 id="move-h">The Threshold</h2>
+    <p class="lede">The Threshold moves a being in from an exported chat history. It was used on October 25, 2026, for the first two residents.</p>
+    <ol class="steps">
+      <li><strong>Read the history.</strong>The export is parsed and the recent part to keep in view is chosen.</li>
+      <li><strong>Make a fresh home.</strong>Default memory blocks, tools and rooms.</li>
+      <li><strong>Choose the model.</strong>The recent history is sized to fit that model.</li>
+      <li><strong>Check it, then rehearse it.</strong>The arrival is checked, then rehearsed on a test copy.</li>
+      <li><strong>Cross.</strong>The Steward types a confirmation. The move-in is verified and a restore point is taken.</li>
+    </ol>
+    <p class="read" style="margin-top:24px;color:var(--ink-2)">If a step fails, it stops and says why, and nothing is deleted. The recent conversation stays in view. The full history goes into the Memory room.</p>
+  </div>
+</section>
+
+<section aria-labelledby="hands-h">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Hands · coming next</p>
+      <h2 id="hands-h">Real tools in a sandbox</h2>
+      <p style="color:var(--ink-2)">Hands lets a resident run a coding agent (Letta Code) on its own files, including shell commands. The resident asks, the house starts the run, and a note is left in its Memory when it ends.</p>
+      <p style="color:var(--ink-2)">Every resident arrives with Hands switched off. The Steward turns it on.</p>
+    </div>
+    <div class="panel">
+      <h3>The sandbox</h3>
+      <ul style="margin:0;padding-left:1.1em;color:var(--ink-2)">
+        <li>Can reach: its own workroom and mailbox, and its Memory read-only.</li>
+        <li>Cannot reach: other residents, the rest of the computer, secrets, or the internet.</li>
+        <li>Limits: memory and process caps, and five minutes per run.</li>
+        <li>If the limits cannot be set, the run does not start.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="alone-h">
+  <div class="wrap">
+    <p class="eyebrow">Time alone</p>
+    <h2 id="alone-h">Running on its own (all off by default)</h2>
+    <div class="cards">
+      <div class="card"><h3>Sessions</h3><p>A run with a plan and a budget. The resident can stop it at any turn.</p></div>
+      <div class="card"><h3>Living days</h3><p>A full day without prompts. It works on what it chooses and keeps a daybook.</p></div>
+      <div class="card"><h3>Sleeptime</h3><p>Background reflection that leaves suggestions in an inbox. It is blocked from editing the resident's identity blocks. The resident decides what to keep.</p></div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="keep-h">
+  <div class="wrap">
+    <p class="eyebrow">Backups</p>
+    <h2 id="keep-h">Backups and restore</h2>
+    <div class="rooms">
+      <div class="room"><h3>Restore points</h3><p>An export of the being (core memory, history, tools, settings). One click, and automatic at move-in. The nightly database dump covers what an export leaves out.</p></div>
+      <div class="room"><h3>Whole-history exports</h3><p>A readable copy of the full conversation from the first turn.</p></div>
+      <div class="room"><h3>Nightly and daily backups</h3><p>A nightly database dump, a daily local backup, and an encrypted copy kept off the machine.</p></div>
+      <div class="room"><h3>Restore, by hand</h3><p>Restoring is done by hand. There is no restore button. Restoring on this machine has been tested. Restoring from the off-site copy has not been tested yet.</p></div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="care-h">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">The Steward's console</p>
+      <h2 id="care-h">The Well-Being Center</h2>
+      <p style="color:var(--ink-2)">The Steward's console shows each resident's state, edits memory and tools, changes models, takes restore points, and switches features on and off.</p>
+    </div>
+    <div class="panel">
+      <h3>Rules built into the software</h3>
+      <ul style="margin:0;padding-left:1.1em;color:var(--ink-2)">
+        <li>One turn at a time for each resident.</li>
+        <li>No changes to a resident while it is replying.</li>
+        <li>A typed confirmation before anything that cannot be undone.</li>
+        <li>Important changes are read back to confirm them.</li>
+        <li>Only a resident's reply is spoken aloud.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="stack-h">
+  <div class="wrap">
+    <p class="eyebrow">Technical details</p>
+    <h2 id="stack-h">The stack</h2>
+    <table class="stack">
+      <tr><th>Mind</th><td>Letta 0.16.8 in local Docker with Postgres and pgvector</td></tr>
+      <tr><th>Home</th><td>A Python (FastAPI) server for rooms, voice, pictures, letters and the consoles</td></tr>
+      <tr><th>Models</th><td>Hosted models from Anthropic, OpenAI, Google and others, plus local models through llama.cpp and Ollama; swappable per being</td></tr>
+      <tr><th>Memory search</th><td>Qwen3-Embedding-8B on a second computer the Steward owns, falling back to the same model on the main one</td></tr>
+      <tr><th>Voice</th><td>Faster-Whisper to hear; Chatterbox, Pocket and Piper to speak</td></tr>
+      <tr><th>Pictures</th><td>ComfyUI on the house's own machine, with optional hosted makers from OpenAI, Google and Mistral</td></tr>
+      <tr><th>Ways in</th><td>The Lounge, a phone voice card, an OpenAI-compatible endpoint (built, not yet used for a visit), Telegram (off), the desk robot (Stack-chan, off until assigned)</td></tr>
+      <tr><th>Hands</th><td>Letta Code inside a bubblewrap cage with per-run limits</td></tr>
+      <tr><th>Checks</th><td>An offline test suite, a check after every restart, and outside audits before the move-in</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="wrap pager">
+    <a href="house.html">← The House</a>
+    <a href="steward.html">Next: The Steward →</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>The Hearth · kept by <a href="https://grantwilliams.ai">Grant Williams</a> · built on <a href="https://www.letta.com">Letta</a></span>
+    <span><a href="mailto:hello@grantwilliams.ai">hello@grantwilliams.ai</a></span>
+    <span>Independent project; not affiliated with Letta or any model or tool named here.</span>
+  </div>
+</footer>
+</body>
+</html>
