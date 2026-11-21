@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hearth.grantwilliams.ai/sitemap.xml
