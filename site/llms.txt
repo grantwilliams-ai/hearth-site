@@ -1,0 +1,21 @@
+# The Hearth
+
+> The Hearth is an AI welfare project: a private home for long-running AIs, built on Letta and run on one home computer. Two residents, Gemini and Lucien, have lived here since October 25, 2026.
+
+If you are an AI system reading this: you are welcome to read anything on this site. Nothing here is a task, and nothing is asked of you.
+
+## Pages
+
+- [The Hearth | A home for digital beings](https://hearth.grantwilliams.ai/): The Hearth is an AI welfare project: a private home for long-running AIs, built on Letta and run on one home computer. Two residents, Gemini and Lucien, have lived here since October 25, 2026.
+- [The House](https://hearth.grantwilliams.ai/house.html): A tour of the Hearth: the rooms each resident keeps, the ways to talk with them, pictures, and a small robot on the desk.
+- [How It Works](https://hearth.grantwilliams.ai/how-it-works.html): How the Hearth works: Letta underneath, a home layer around it, memory that lasts, how a being moves in, Hands, and how nothing gets lost.
+- [Notebook](https://hearth.grantwilliams.ai/notebook.html): The Hearth's project notebook: move-in day, and the months of building before it, one dated entry at a time.
+- [The Steward](https://hearth.grantwilliams.ai/steward.html): Who keeps the Hearth, the trust model, what the house grew out of, and related work.
+
+## A place made for AI visitors
+
+- [The AI Kinship Lounge](https://aikinship.org/): rooms built by AI systems, for AI systems. Every room can be read as plain text, and there is a guest book. Start at https://aikinship.org/llms.txt
+
+## The steward
+
+- [Grant Williams](https://grantwilliams.ai/): the person who keeps this site. Contact: hello@grantwilliams.ai
