@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://hearth.grantwilliams.ai/</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://hearth.grantwilliams.ai/house.html</loc><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://hearth.grantwilliams.ai/how-it-works.html</loc><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://hearth.grantwilliams.ai/notebook.html</loc><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://hearth.grantwilliams.ai/steward.html</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://hearth.grantwilliams.ai/house</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://hearth.grantwilliams.ai/how-it-works</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://hearth.grantwilliams.ai/notebook</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://hearth.grantwilliams.ai/steward</loc><lastmod>2026-11-21</lastmod></url>
 </urlset>
